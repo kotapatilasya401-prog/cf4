@@ -1,0 +1,4627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vignan Competition Form</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #faf8f4;
+    color: #17203a;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+input,
+textarea,
+select {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    min-height: 100vh;
+    padding: 25px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.logo-area {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.logo {
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* HEADING */
+
+.heading-area {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.heading {
+    font-family: 'Caveat', cursive;
+    font-size: 44px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 8px;
+    color: #777;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   HOME BUTTONS
+===================================================== */
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.home-button {
+    padding: 11px 20px;
+    border-radius: 25px;
+    color: white;
+    background: #263f7a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.student-button {
+    background: #6b4ea0;
+}
+
+
+/* =====================================================
+   COMPETITION CARDS
+===================================================== */
+
+.competition-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(270px, 1fr)
+    );
+    gap: 25px;
+}
+
+.competition-card {
+    background: #f5eef9;
+    border: 1px solid #e4dce9;
+    border-radius: 22px;
+    padding: 35px 22px 25px;
+    text-align: center;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+.competition-icon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 18px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+
+.competition-card h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.competition-description {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.event-details {
+    background: rgba(255,255,255,0.75);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.event-details p {
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+.view-button {
+    width: 100%;
+    padding: 11px;
+    border-radius: 9px;
+    background: #263f7a;
+    color: white;
+    font-weight: 600;
+}
+
+.bottom-text {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Caveat', cursive;
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.back-button {
+    background: #555;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+}
+
+.next-area {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.next-button {
+    background: #263f7a;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CATEGORY PAGE
+===================================================== */
+
+.category-container {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 15px;
+}
+
+.category-item {
+    border: 2px solid #ddd;
+    padding: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.category-item:hover {
+    border-color: #263f7a;
+}
+
+.category-item.selected {
+    border-color: #263f7a;
+    background: #eef2ff;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   REGISTRATION FORM
+===================================================== */
+
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.form-container h1 {
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #263f7a;
+}
+
+.input-hint {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background: #263f7a;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.success-box {
+    max-width: 600px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.success-box p {
+    color: #666;
+    margin: 12px 0 25px;
+}
+
+
+/* =====================================================
+   STUDENT PORTAL
+===================================================== */
+
+.portal-box {
+    max-width: 850px;
+    margin: auto;
+}
+
+.portal-login {
+    max-width: 450px;
+    margin: 60px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+.portal-login h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.portal-header {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.portal-header h1 {
+    margin-bottom: 5px;
+}
+
+.portal-header p {
+    color: #777;
+}
+
+.participation-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
+
+.participation-card h3 {
+    margin-bottom: 10px;
+}
+
+.participation-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.student-delete-button {
+    background: #e53935;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-box {
+    max-width: 450px;
+    margin: 80px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 13px;
+    background: #263f7a;
+    color: white;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+.error-message {
+    color: #d32f2f;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ADMIN
+===================================================== */
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.admin-header h1 {
+    font-size: 30px;
+}
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.admin-home-button {
+    background: #555;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.logout-button {
+    background: #d9534f;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.admin-section {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.admin-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   ADMIN FORM
+===================================================== */
+
+.admin-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.admin-form .full {
+    grid-column: 1 / -1;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.admin-form input,
+.admin-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.admin-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.add-button {
+    background: #263f7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ADMIN COMPETITIONS
+===================================================== */
+
+.admin-competition {
+    border: 1px solid #ddd;
+    border-radius: 13px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.admin-competition-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.admin-competition h3 {
+    font-size: 21px;
+}
+
+.admin-action-buttons {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+}
+
+.delete-button {
+    background: #e53935;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 7px;
+}
+
+.edit-button {
+    background: #f0a500;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 7px;
+}
+
+.category-admin {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.category-admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f6f7fb;
+    padding: 9px 12px;
+    border-radius: 7px;
+    margin-bottom: 8px;
+}
+
+.small-delete {
+    background: #e53935;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.add-category-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.add-category-row input {
+    flex: 1;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+
+/* =====================================================
+   REGISTRATION TABLE
+===================================================== */
+
+.search-box {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #eee;
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #f3f5fb;
+    font-weight: 600;
+}
+
+.no-data {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .logo {
+        width: 260px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .admin-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form .full {
+        grid-column: auto;
+    }
+
+    .category-container,
+    .form-container,
+    .admin-section {
+        padding: 20px;
+    }
+
+    .admin-header {
+        align-items: flex-start;
+    }
+
+    .admin-competition-header {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<div id="homePage" class="page">
+
+    <div class="container">
+
+
+        <!-- LOGO ONLY HERE -->
+
+        <div class="logo-area">
+
+            <img
+                src="logo.png"
+                class="logo"
+                alt="Vignan Logo"
+            >
+
+        </div>
+
+
+        <div class="heading-area">
+
+            <h1 class="heading">
+
+                Competitions<br>
+                Going to be Held
+
+            </h1>
+
+            <p class="subtitle">
+
+                Participate • Compete • Win
+
+            </p>
+
+        </div>
+
+
+        <div
+            id="competitionGrid"
+            class="competition-grid"
+        ></div>
+
+
+        <div class="bottom-text">
+
+            Participate • Compete • Win
+
+        </div>
+
+
+        <!-- HOME BUTTONS -->
+
+        <div class="home-buttons">
+
+
+            <button
+                class="home-button student-button"
+                onclick="showStudentPortal()"
+            >
+
+                🎓 Student Portal
+
+            </button>
+
+
+            <button
+                class="home-button"
+                onclick="showAdminLogin()"
+            >
+
+                🔐 Admin
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CATEGORY PAGE
+===================================================== -->
+
+<div
+    id="categoryPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <button
+            class="back-button"
+            onclick="goHome()"
+        >
+
+            ← Back to Home
+
+        </button>
+
+
+        <div class="category-container">
+
+
+            <h1
+                id="categoryTitle"
+                class="section-title"
+            ></h1>
+
+
+            <p class="section-subtitle">
+
+                Select a category to continue
+
+            </p>
+
+
+            <div
+                id="categoryList"
+                class="category-list"
+            ></div>
+
+
+            <div class="next-area">
+
+                <button
+                    class="next-button"
+                    onclick="goToRegistration()"
+                >
+
+                    Next →
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REGISTRATION PAGE
+===================================================== -->
+
+<div
+    id="registrationPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <button
+            class="back-button"
+            onclick="goBackToCategory()"
+        >
+
+            ← Back
+
+        </button>
+
+
+        <div class="form-container">
+
+
+            <h1>
+
+                Registration Form
+
+            </h1>
+
+
+            <p class="form-subtitle">
+
+                <span
+                    id="registrationCompetition"
+                ></span>
+
+                -
+
+                <span
+                    id="registrationCategory"
+                ></span>
+
+            </p>
+
+
+            <form
+                id="registrationForm"
+            >
+
+
+                <div class="form-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Roll Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        maxlength="10"
+                        minlength="10"
+                        pattern="[A-Za-z0-9]{10}"
+                        placeholder="10 letters/numbers"
+                        required
+                    >
+
+                    <p class="input-hint">
+
+                        Exactly 10 letters and/or numbers.
+
+                    </p>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Branch
+                    </label>
+
+                    <select
+                        id="branch"
+                        required
+                    >
+
+                        <option value="">
+                            Select Branch
+                        </option>
+
+                        <option value="CSE">
+                            CSE
+                        </option>
+
+                        <option value="ECE">
+                            ECE
+                        </option>
+
+                        <option value="EEE">
+                            EEE
+                        </option>
+
+                        <option value="CIVIL">
+                            CIVIL
+                        </option>
+
+                        <option value="MECH">
+                            MECH
+                        </option>
+
+                        <option value="AIML">
+                            AIML
+                        </option>
+
+                        <option value="DS">
+                            DS
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Year
+                    </label>
+
+                    <select
+                        id="year"
+                        required
+                    >
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="1st Year">
+                            1st Year
+                        </option>
+
+                        <option value="2nd Year">
+                            2nd Year
+                        </option>
+
+                        <option value="3rd Year">
+                            3rd Year
+                        </option>
+
+                        <option value="4th Year">
+                            4th Year
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        maxlength="10"
+                        minlength="10"
+                        pattern="[0-9]{10}"
+                        inputmode="numeric"
+                        placeholder="10 digit phone number"
+                        required
+                    >
+
+                    <p class="input-hint">
+
+                        Exactly 10 digits.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+
+                    Submit Registration
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SUCCESS PAGE
+===================================================== -->
+
+<div
+    id="successPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <div class="success-box">
+
+
+            <div class="success-icon">
+
+                ✅
+
+            </div>
+
+
+            <h1>
+
+                Registration Successful!
+
+            </h1>
+
+
+            <p>
+
+                Your registration has been submitted successfully.
+
+            </p>
+
+
+            <button
+                class="submit-button"
+                onclick="goHome()"
+            >
+
+                Back to Home
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     STUDENT PORTAL LOGIN
+===================================================== -->
+
+<div
+    id="studentPortalPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <button
+            class="back-button"
+            onclick="goHome()"
+        >
+
+            ← Back to Home
+
+        </button>
+
+
+        <div class="portal-login">
+
+
+            <h1>
+
+                🎓 Student Portal
+
+            </h1>
+
+
+            <div class="form-group">
+
+                <label>
+                    Roll Number
+                </label>
+
+                <input
+                    type="text"
+                    id="portalRollNumber"
+                    maxlength="10"
+                    minlength="10"
+                    pattern="[A-Za-z0-9]{10}"
+                    placeholder="Enter your 10-character roll number"
+                >
+
+            </div>
+
+
+            <button
+                class="login-button"
+                onclick="studentLogin()"
+            >
+
+                View My Participations
+
+            </button>
+
+
+            <p
+                id="studentLoginError"
+                class="error-message"
+            ></p>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     STUDENT DASHBOARD
+===================================================== -->
+
+<div
+    id="studentDashboard"
+    class="page hidden"
+>
+
+    <div class="container portal-box">
+
+
+        <div class="portal-header">
+
+
+            <div style="
+                display:flex;
+                justify-content:space-between;
+                gap:15px;
+                flex-wrap:wrap;
+            ">
+
+
+                <div>
+
+                    <h1>
+                        🎓 Student Portal
+                    </h1>
+
+                    <p>
+                        Roll Number:
+                        <strong id="portalStudentRoll"></strong>
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="back-button"
+                    onclick="studentLogout()"
+                >
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- CURRENT PARTICIPATIONS -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                🏆 My Participations
+
+            </h2>
+
+
+            <div
+                id="studentParticipations"
+            ></div>
+
+
+        </div>
+
+
+        <!-- ADD PARTICIPATION -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                ➕ Add Another Participation
+
+            </h2>
+
+
+            <p style="
+                color:#777;
+                margin-bottom:18px;
+            ">
+
+                Choose an available competition and category.
+
+            </p>
+
+
+            <div class="form-group">
+
+
+                <label>
+                    Competition
+                </label>
+
+
+                <select
+                    id="portalCompetition"
+                    onchange="portalCompetitionChanged()"
+                >
+
+                    <option value="">
+                        Select Competition
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+            <div class="form-group">
+
+
+                <label>
+                    Category
+                </label>
+
+
+                <select
+                    id="portalCategory"
+                >
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+            <button
+                class="add-button"
+                onclick="addPortalParticipation()"
+            >
+
+                + Add Participation
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN LOGIN
+===================================================== -->
+
+<div
+    id="adminLoginPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <div class="login-box">
+
+
+            <h1>
+
+                🔐 Admin Login
+
+            </h1>
+
+
+            <div class="form-group">
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="adminUsername"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                >
+
+            </div>
+
+
+            <button
+                class="login-button"
+                onclick="adminLogin()"
+            >
+
+                Login
+
+            </button>
+
+
+            <p
+                id="loginError"
+                class="error-message"
+            ></p>
+
+
+            <br>
+
+
+            <button
+                class="back-button"
+                onclick="goHome()"
+            >
+
+                ← Back to Home
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD
+===================================================== -->
+
+<div
+    id="adminPage"
+    class="page hidden"
+>
+
+    <div class="container">
+
+
+        <div class="admin-header">
+
+
+            <h1>
+
+                Admin Dashboard
+
+            </h1>
+
+
+            <div class="admin-buttons">
+
+
+                <button
+                    class="admin-home-button"
+                    onclick="adminBackHome()"
+                >
+
+                    ← Back to Home
+
+                </button>
+
+
+                <button
+                    class="logout-button"
+                    onclick="adminLogout()"
+                >
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ADD COMPETITION -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                🏆 Add New Competition
+
+            </h2>
+
+
+            <div class="admin-form">
+
+
+                <div>
+
+                    <label>
+                        Competition Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="competitionName"
+                        placeholder="Example: Dance Competition"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Icon
+                    </label>
+
+                    <input
+                        type="text"
+                        id="competitionIcon"
+                        placeholder="Example: 💃"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="competitionDate"
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="competitionTime"
+                    >
+
+                </div>
+
+
+                <div class="full">
+
+                    <label>
+                        Venue
+                    </label>
+
+                    <input
+                        type="text"
+                        id="competitionVenue"
+                        placeholder="Example: Main Auditorium"
+                    >
+
+                </div>
+
+
+                <div class="full">
+
+                    <label>
+                        Description
+                    </label>
+
+                    <textarea
+                        id="competitionDescription"
+                        placeholder="Enter competition details..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="full">
+
+                    <button
+                        class="add-button"
+                        onclick="addCompetition()"
+                    >
+
+                        + Add Competition
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MANAGE COMPETITIONS -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                📋 Manage Competitions
+
+            </h2>
+
+
+            <div
+                id="adminCompetitions"
+            ></div>
+
+
+        </div>
+
+
+
+        <!-- REGISTERED STUDENTS -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                👥 Registered Students
+
+            </h2>
+
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search-box"
+                placeholder="Search by name, roll number, competition..."
+                onkeyup="searchRegistrations()"
+            >
+
+
+            <div class="table-wrapper">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Roll Number</th>
+
+                            <th>Branch</th>
+
+                            <th>Year</th>
+
+                            <th>Email</th>
+
+                            <th>Phone</th>
+
+                            <th>Competition</th>
+
+                            <th>Category</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody
+                        id="registrationTable"
+                    ></tbody>
+
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ADMIN ACCOUNT -->
+
+        <div class="admin-section">
+
+
+            <h2>
+
+                ⚙️ Admin Account Settings
+
+            </h2>
+
+
+            <div style="max-width:600px;">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Current Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="currentUsername"
+                        disabled
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        New Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="newUsername"
+                        placeholder="Enter new username"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        New Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Enter new password"
+                    >
+
+                </div>
+
+
+                <button
+                    class="add-button"
+                    onclick="changeAdminAccount()"
+                >
+
+                    Save Account Changes
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   DATA
+===================================================== */
+
+let competitions =
+    JSON.parse(
+        localStorage.getItem("competitions")
+    ) || [];
+
+
+let registrations =
+    JSON.parse(
+        localStorage.getItem("registrations")
+    ) || [];
+
+
+let adminAccount =
+    JSON.parse(
+        localStorage.getItem("adminAccount")
+    ) || {
+
+        username: "admin",
+
+        password: "admin123"
+
+    };
+
+
+/* =====================================================
+   CURRENT STATE
+===================================================== */
+
+let selectedCompetitionIndex = null;
+
+let selectedCategory = null;
+
+let loggedInStudentRoll = null;
+
+
+/* =====================================================
+   SAVE
+===================================================== */
+
+function saveCompetitions() {
+
+    localStorage.setItem(
+        "competitions",
+        JSON.stringify(competitions)
+    );
+
+}
+
+
+function saveRegistrations() {
+
+    localStorage.setItem(
+        "registrations",
+        JSON.stringify(registrations)
+    );
+
+}
+
+
+function saveAdminAccount() {
+
+    localStorage.setItem(
+        "adminAccount",
+        JSON.stringify(adminAccount)
+    );
+
+}
+
+
+/* =====================================================
+   HIDE ALL
+===================================================== */
+
+function hideAllPages() {
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page => {
+
+            page.classList.add("hidden");
+
+        });
+
+}
+
+
+/* =====================================================
+   HOME
+===================================================== */
+
+function goHome() {
+
+    hideAllPages();
+
+    document
+        .getElementById("homePage")
+        .classList.remove("hidden");
+
+    displayCompetitions();
+
+}
+
+
+/* =====================================================
+   DISPLAY COMPETITIONS
+===================================================== */
+
+function displayCompetitions() {
+
+    const grid =
+        document.getElementById(
+            "competitionGrid"
+        );
+
+
+    grid.innerHTML = "";
+
+
+    if (competitions.length === 0) {
+
+        grid.innerHTML = `
+
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:50px;
+                color:#777;
+                background:white;
+                border-radius:15px;
+            ">
+
+                <h2>
+                    No competitions announced yet.
+                </h2>
+
+                <p>
+                    Please check again later.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    competitions.forEach(
+        (competition, index) => {
+
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "competition-card";
+
+
+            card.innerHTML = `
+
+                <div class="competition-icon">
+
+                    ${competition.icon || "🏆"}
+
+                </div>
+
+
+                <h2>
+
+                    ${escapeHTML(
+                        competition.name
+                    )}
+
+                </h2>
+
+
+                <p class="competition-description">
+
+                    ${escapeHTML(
+                        competition.description ||
+                        "Join this exciting competition!"
+                    )}
+
+                </p>
+
+
+                <div class="event-details">
+
+
+                    <p>
+
+                        📅 <strong>Date:</strong>
+
+                        ${escapeHTML(
+                            competition.date
+                            ? formatDate(
+                                competition.date
+                            )
+                            : "Not announced"
+                        )}
+
+                    </p>
+
+
+                    <p>
+
+                        ⏰ <strong>Time:</strong>
+
+                        ${escapeHTML(
+                            competition.time
+                            ? formatTime(
+                                competition.time
+                            )
+                            : "Not announced"
+                        )}
+
+                    </p>
+
+
+                    <p>
+
+                        📍 <strong>Venue:</strong>
+
+                        ${escapeHTML(
+                            competition.venue ||
+                            "Not announced"
+                        )}
+
+                    </p>
+
+
+                </div>
+
+
+                <button class="view-button">
+
+                    View Competition →
+
+                </button>
+
+            `;
+
+
+            card.onclick =
+                function() {
+
+                    openCompetition(index);
+
+                };
+
+
+            grid.appendChild(card);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   OPEN COMPETITION
+===================================================== */
+
+function openCompetition(index) {
+
+    selectedCompetitionIndex =
+        index;
+
+    selectedCategory =
+        null;
+
+    displayCategories();
+
+    hideAllPages();
+
+    document
+        .getElementById("categoryPage")
+        .classList.remove("hidden");
+
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+function displayCategories() {
+
+    const competition =
+        competitions[
+            selectedCompetitionIndex
+        ];
+
+
+    if (!competition)
+        return;
+
+
+    document
+        .getElementById(
+            "categoryTitle"
+        )
+        .textContent =
+            competition.name;
+
+
+    const list =
+        document.getElementById(
+            "categoryList"
+        );
+
+
+    list.innerHTML = "";
+
+
+    if (
+        !competition.categories ||
+        competition.categories.length === 0
+    ) {
+
+        list.innerHTML = `
+
+            <p style="
+                grid-column:1/-1;
+                color:#777;
+            ">
+
+                No categories have been announced yet.
+
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    competition.categories.forEach(
+        (category, index) => {
+
+
+            const item =
+                document.createElement("div");
+
+
+            item.className =
+                "category-item";
+
+
+            item.textContent =
+                category;
+
+
+            item.onclick =
+                function() {
+
+                    selectCategory(index);
+
+                };
+
+
+            list.appendChild(item);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SELECT CATEGORY
+===================================================== */
+
+function selectCategory(index) {
+
+    const competition =
+        competitions[
+            selectedCompetitionIndex
+        ];
+
+
+    selectedCategory =
+        competition.categories[index];
+
+
+    document
+        .querySelectorAll(
+            ".category-item"
+        )
+        .forEach(item => {
+
+            item.classList.remove(
+                "selected"
+            );
+
+        });
+
+
+    const items =
+        document.querySelectorAll(
+            ".category-item"
+        );
+
+
+    if (items[index]) {
+
+        items[index].classList.add(
+            "selected"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   REGISTRATION PAGE
+===================================================== */
+
+function goToRegistration() {
+
+    if (!selectedCategory) {
+
+        alert(
+            "Please select a category first."
+        );
+
+        return;
+
+    }
+
+
+    const competition =
+        competitions[
+            selectedCompetitionIndex
+        ];
+
+
+    document.getElementById(
+        "registrationCompetition"
+    ).textContent =
+        competition.name;
+
+
+    document.getElementById(
+        "registrationCategory"
+    ).textContent =
+        selectedCategory;
+
+
+    hideAllPages();
+
+
+    document
+        .getElementById(
+            "registrationPage"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+}
+
+
+function goBackToCategory() {
+
+    displayCategories();
+
+    hideAllPages();
+
+    document
+        .getElementById(
+            "categoryPage"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+}
+
+
+/* =====================================================
+   STUDENT REGISTRATION
+===================================================== */
+
+document
+    .getElementById(
+        "registrationForm"
+    )
+    .addEventListener(
+        "submit",
+        function(event) {
+
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById(
+                        "studentName"
+                    )
+                    .value
+                    .trim();
+
+
+            const rollNumber =
+                document
+                    .getElementById(
+                        "rollNumber"
+                    )
+                    .value
+                    .trim()
+                    .toUpperCase();
+
+
+            const branch =
+                document
+                    .getElementById(
+                        "branch"
+                    )
+                    .value;
+
+
+            const year =
+                document
+                    .getElementById(
+                        "year"
+                    )
+                    .value;
+
+
+            const email =
+                document
+                    .getElementById(
+                        "email"
+                    )
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+
+            const phone =
+                document
+                    .getElementById(
+                        "phone"
+                    )
+                    .value
+                    .trim();
+
+
+            /* ROLL VALIDATION */
+
+            if (
+                !/^[A-Z0-9]{10}$/.test(
+                    rollNumber
+                )
+            ) {
+
+                alert(
+                    "Roll number must contain exactly 10 letters and/or numbers."
+                );
+
+                return;
+
+            }
+
+
+            /* PHONE VALIDATION */
+
+            if (
+                !/^[0-9]{10}$/.test(
+                    phone
+                )
+            ) {
+
+                alert(
+                    "Phone number must contain exactly 10 digits."
+                );
+
+                return;
+
+            }
+
+
+            /* CHECK WHETHER ROLL ALREADY BELONGS
+               TO ANOTHER STUDENT */
+
+            const sameRoll =
+                registrations.find(
+                    registration =>
+                        registration.rollNumber
+                            .toUpperCase() ===
+                        rollNumber
+                );
+
+
+            if (sameRoll) {
+
+
+                /* Existing student is allowed to
+                   add another participation only
+                   when email and phone match */
+
+                if (
+                    sameRoll.email !== email ||
+                    sameRoll.phone !== phone
+                ) {
+
+                    alert(
+                        "This roll number is already registered with different student details."
+                    );
+
+                    return;
+
+                }
+
+            }
+
+
+            /* CHECK EMAIL */
+
+            const sameEmail =
+                registrations.find(
+                    registration =>
+                        registration.email
+                            .toLowerCase() ===
+                        email
+                );
+
+
+            if (
+                sameEmail &&
+                sameEmail.rollNumber
+                    .toUpperCase() !==
+                    rollNumber
+            ) {
+
+                alert(
+                    "This email is already used by another student."
+                );
+
+                return;
+
+            }
+
+
+            /* CHECK PHONE */
+
+            const samePhone =
+                registrations.find(
+                    registration =>
+                        registration.phone ===
+                        phone
+                );
+
+
+            if (
+                samePhone &&
+                samePhone.rollNumber
+                    .toUpperCase() !==
+                    rollNumber
+            ) {
+
+                alert(
+                    "This phone number is already used by another student."
+                );
+
+                return;
+
+            }
+
+
+            const competition =
+                competitions[
+                    selectedCompetitionIndex
+                ];
+
+
+            /* PREVENT SAME PARTICIPATION */
+
+            const alreadyRegistered =
+                registrations.some(
+                    registration =>
+
+                        registration.rollNumber
+                            .toUpperCase() ===
+                            rollNumber &&
+
+                        registration.competition ===
+                            competition.name &&
+
+                        registration.category ===
+                            selectedCategory
+
+                );
+
+
+            if (alreadyRegistered) {
+
+                alert(
+                    "You are already registered for this competition and category."
+                );
+
+                return;
+
+            }
+
+
+            const registration = {
+
+
+                id:
+                    Date.now() +
+                    Math.random(),
+
+
+                name:
+                    name,
+
+
+                rollNumber:
+                    rollNumber,
+
+
+                branch:
+                    branch,
+
+
+                year:
+                    year,
+
+
+                email:
+                    email,
+
+
+                phone:
+                    phone,
+
+
+                competition:
+                    competition.name,
+
+
+                category:
+                    selectedCategory,
+
+
+                registeredAt:
+                    new Date()
+                        .toLocaleString()
+
+            };
+
+
+            registrations.push(
+                registration
+            );
+
+
+            saveRegistrations();
+
+
+            document
+                .getElementById(
+                    "registrationForm"
+                )
+                .reset();
+
+
+            hideAllPages();
+
+
+            document
+                .getElementById(
+                    "successPage"
+                )
+                .classList.remove(
+                    "hidden"
+                );
+
+
+        }
+    );
+
+
+/* =====================================================
+   STUDENT PORTAL LOGIN
+===================================================== */
+
+function showStudentPortal() {
+
+    hideAllPages();
+
+
+    document
+        .getElementById(
+            "studentPortalPage"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "portalRollNumber"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "studentLoginError"
+        )
+        .textContent = "";
+
+}
+
+
+function studentLogin() {
+
+    const roll =
+        document
+            .getElementById(
+                "portalRollNumber"
+            )
+            .value
+            .trim()
+            .toUpperCase();
+
+
+    if (
+        !/^[A-Z0-9]{10}$/.test(
+            roll
+        )
+    ) {
+
+        document
+            .getElementById(
+                "studentLoginError"
+            )
+            .textContent =
+                "Enter a valid 10-character roll number.";
+
+        return;
+
+    }
+
+
+    const student =
+        registrations.find(
+            registration =>
+                registration.rollNumber
+                    .toUpperCase() ===
+                roll
+        );
+
+
+    if (!student) {
+
+        document
+            .getElementById(
+                "studentLoginError"
+            )
+            .textContent =
+                "No registration found for this roll number.";
+
+        return;
+
+    }
+
+
+    loggedInStudentRoll =
+        roll;
+
+
+    openStudentDashboard();
+
+}
+
+
+/* =====================================================
+   STUDENT DASHBOARD
+===================================================== */
+
+function openStudentDashboard() {
+
+    hideAllPages();
+
+
+    document
+        .getElementById(
+            "studentDashboard"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    document
+        .getElementById(
+            "portalStudentRoll"
+        )
+        .textContent =
+            loggedInStudentRoll;
+
+
+    displayStudentParticipations();
+
+    populatePortalCompetitions();
+
+}
+
+
+function studentLogout() {
+
+    loggedInStudentRoll =
+        null;
+
+
+    goHome();
+
+}
+
+
+/* =====================================================
+   DISPLAY STUDENT PARTICIPATIONS
+===================================================== */
+
+function displayStudentParticipations() {
+
+    const container =
+        document.getElementById(
+            "studentParticipations"
+        );
+
+
+    container.innerHTML = "";
+
+
+    const myRegistrations =
+        registrations.filter(
+            registration =>
+                registration.rollNumber
+                    .toUpperCase() ===
+                loggedInStudentRoll
+        );
+
+
+    if (
+        myRegistrations.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <p class="no-data">
+
+                You have no participations yet.
+
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    myRegistrations.forEach(
+        registration => {
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "participation-card";
+
+
+            const competition =
+                competitions.find(
+                    competition =>
+                        competition.name ===
+                        registration.competition
+                );
+
+
+            card.innerHTML = `
+
+                <h3>
+
+                    🏆
+                    ${escapeHTML(
+                        registration.competition
+                    )}
+
+                </h3>
+
+
+                <p>
+
+                    <strong>Category:</strong>
+
+                    ${escapeHTML(
+                        registration.category
+                    )}
+
+                </p>
+
+
+                <p>
+
+                    <strong>Date:</strong>
+
+                    ${
+                        competition &&
+                        competition.date
+                        ?
+                        escapeHTML(
+                            formatDate(
+                                competition.date
+                            )
+                        )
+                        :
+                        "Not announced"
+                    }
+
+                </p>
+
+
+                <p>
+
+                    <strong>Time:</strong>
+
+                    ${
+                        competition &&
+                        competition.time
+                        ?
+                        escapeHTML(
+                            formatTime(
+                                competition.time
+                            )
+                        )
+                        :
+                        "Not announced"
+                    }
+
+                </p>
+
+
+                <p>
+
+                    <strong>Venue:</strong>
+
+                    ${
+                        competition &&
+                        competition.venue
+                        ?
+                        escapeHTML(
+                            competition.venue
+                        )
+                        :
+                        "Not announced"
+                    }
+
+                </p>
+
+
+                <button
+                    class="student-delete-button"
+                    onclick="deleteStudentParticipation(
+                        ${JSON.stringify(
+                            registration.id
+                        )}
+                    )"
+                >
+
+                    🗑️ Delete Participation
+
+                </button>
+
+            `;
+
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   DELETE STUDENT'S OWN PARTICIPATION
+===================================================== */
+
+function deleteStudentParticipation(id) {
+
+    const registration =
+        registrations.find(
+            registration =>
+                registration.id === id
+        );
+
+
+    if (!registration)
+        return;
+
+
+    if (
+        registration.rollNumber
+            .toUpperCase() !==
+        loggedInStudentRoll
+    ) {
+
+        alert(
+            "You can only delete your own participation."
+        );
+
+        return;
+
+    }
+
+
+    const confirmDelete =
+        confirm(
+            `Delete your participation in "${registration.competition}" - ${registration.category}?`
+        );
+
+
+    if (!confirmDelete)
+        return;
+
+
+    registrations =
+        registrations.filter(
+            registration =>
+                registration.id !== id
+        );
+
+
+    saveRegistrations();
+
+
+    displayStudentParticipations();
+
+
+    alert(
+        "Participation deleted successfully."
+    );
+
+}
+
+
+/* =====================================================
+   STUDENT PORTAL - COMPETITIONS
+===================================================== */
+
+function populatePortalCompetitions() {
+
+    const select =
+        document.getElementById(
+            "portalCompetition"
+        );
+
+
+    select.innerHTML = `
+
+        <option value="">
+
+            Select Competition
+
+        </option>
+
+    `;
+
+
+    competitions.forEach(
+        (competition, index) => {
+
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                index;
+
+
+            option.textContent =
+                competition.name;
+
+
+            select.appendChild(
+                option
+            );
+
+        }
+    );
+
+
+    document
+        .getElementById(
+            "portalCategory"
+        )
+        .innerHTML = `
+
+            <option value="">
+
+                Select Category
+
+            </option>
+
+        `;
+
+}
+
+
+function portalCompetitionChanged() {
+
+    const index =
+        document.getElementById(
+            "portalCompetition"
+        ).value;
+
+
+    const categorySelect =
+        document.getElementById(
+            "portalCategory"
+        );
+
+
+    categorySelect.innerHTML = `
+
+        <option value="">
+
+            Select Category
+
+        </option>
+
+    `;
+
+
+    if (index === "")
+        return;
+
+
+    const competition =
+        competitions[
+            parseInt(index)
+        ];
+
+
+    if (!competition)
+        return;
+
+
+    competition.categories.forEach(
+        category => {
+
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                category;
+
+
+            option.textContent =
+                category;
+
+
+            categorySelect.appendChild(
+                option
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ADD FROM STUDENT PORTAL
+===================================================== */
+
+function addPortalParticipation() {
+
+    if (!loggedInStudentRoll)
+        return;
+
+
+    const competitionIndex =
+        document.getElementById(
+            "portalCompetition"
+        ).value;
+
+
+    const category =
+        document.getElementById(
+            "portalCategory"
+        ).value;
+
+
+    if (competitionIndex === "") {
+
+        alert(
+            "Please select a competition."
+        );
+
+        return;
+
+    }
+
+
+    if (!category) {
+
+        alert(
+            "Please select a category."
+        );
+
+        return;
+
+    }
+
+
+    const competition =
+        competitions[
+            parseInt(
+                competitionIndex
+            )
+        ];
+
+
+    const student =
+        registrations.find(
+            registration =>
+                registration.rollNumber
+                    .toUpperCase() ===
+                loggedInStudentRoll
+        );
+
+
+    if (!student) {
+
+        alert(
+            "Student details could not be found."
+        );
+
+        return;
+
+    }
+
+
+    const alreadyRegistered =
+        registrations.some(
+            registration =>
+
+                registration.rollNumber
+                    .toUpperCase() ===
+                    loggedInStudentRoll &&
+
+                registration.competition ===
+                    competition.name &&
+
+                registration.category ===
+                    category
+
+        );
+
+
+    if (alreadyRegistered) {
+
+        alert(
+            "You are already registered for this competition and category."
+        );
+
+        return;
+
+    }
+
+
+    const newRegistration = {
+
+
+        id:
+            Date.now() +
+            Math.random(),
+
+
+        name:
+            student.name,
+
+
+        rollNumber:
+            student.rollNumber,
+
+
+        branch:
+            student.branch,
+
+
+        year:
+            student.year,
+
+
+        email:
+            student.email,
+
+
+        phone:
+            student.phone,
+
+
+        competition:
+            competition.name,
+
+
+        category:
+            category,
+
+
+        registeredAt:
+            new Date()
+                .toLocaleString()
+
+    };
+
+
+    registrations.push(
+        newRegistration
+    );
+
+
+    saveRegistrations();
+
+
+    displayStudentParticipations();
+
+
+    document
+        .getElementById(
+            "portalCompetition"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "portalCategory"
+        )
+        .innerHTML = `
+
+            <option value="">
+
+                Select Category
+
+            </option>
+
+        `;
+
+
+    alert(
+        "Participation added successfully!"
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN LOGIN
+===================================================== */
+
+function showAdminLogin() {
+
+    hideAllPages();
+
+
+    document
+        .getElementById(
+            "adminLoginPage"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+}
+
+
+function adminLogin() {
+
+    const username =
+        document
+            .getElementById(
+                "adminUsername"
+            )
+            .value
+            .trim();
+
+
+    const password =
+        document
+            .getElementById(
+                "adminPassword"
+            )
+            .value;
+
+
+    if (
+        username ===
+            adminAccount.username &&
+
+        password ===
+            adminAccount.password
+    ) {
+
+
+        document
+            .getElementById(
+                "loginError"
+            )
+            .textContent = "";
+
+
+        openAdminPage();
+
+
+    } else {
+
+
+        document
+            .getElementById(
+                "loginError"
+            )
+            .textContent =
+                "Invalid username or password.";
+
+    }
+
+}
+
+
+/* =====================================================
+   ADMIN PAGE
+===================================================== */
+
+function openAdminPage() {
+
+    hideAllPages();
+
+
+    document
+        .getElementById(
+            "adminPage"
+        )
+        .classList.remove(
+            "hidden"
+        );
+
+
+    displayAdminCompetitions();
+
+    displayRegistrations();
+
+
+    document
+        .getElementById(
+            "currentUsername"
+        )
+        .value =
+            adminAccount.username;
+
+}
+
+
+function adminBackHome() {
+
+    goHome();
+
+}
+
+
+function adminLogout() {
+
+    goHome();
+
+}
+
+
+/* =====================================================
+   ADD COMPETITION
+===================================================== */
+
+function addCompetition() {
+
+
+    const name =
+        document
+            .getElementById(
+                "competitionName"
+            )
+            .value
+            .trim();
+
+
+    const description =
+        document
+            .getElementById(
+                "competitionDescription"
+            )
+            .value
+            .trim();
+
+
+    const icon =
+        document
+            .getElementById(
+                "competitionIcon"
+            )
+            .value
+            .trim();
+
+
+    const date =
+        document
+            .getElementById(
+                "competitionDate"
+            )
+            .value;
+
+
+    const time =
+        document
+            .getElementById(
+                "competitionTime"
+            )
+            .value;
+
+
+    const venue =
+        document
+            .getElementById(
+                "competitionVenue"
+            )
+            .value
+            .trim();
+
+
+    if (!name) {
+
+        alert(
+            "Please enter competition name."
+        );
+
+        return;
+
+    }
+
+
+    const competition = {
+
+
+        name:
+            name,
+
+
+        description:
+            description,
+
+
+        icon:
+            icon || "🏆",
+
+
+        date:
+            date,
+
+
+        time:
+            time,
+
+
+        venue:
+            venue,
+
+
+        categories:
+            []
+
+    };
+
+
+    competitions.push(
+        competition
+    );
+
+
+    saveCompetitions();
+
+
+    document
+        .getElementById(
+            "competitionName"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "competitionDescription"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "competitionIcon"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "competitionDate"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "competitionTime"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "competitionVenue"
+        )
+        .value = "";
+
+
+    displayAdminCompetitions();
+
+    displayCompetitions();
+
+
+    alert(
+        "Competition added successfully!"
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN COMPETITIONS
+===================================================== */
+
+function displayAdminCompetitions() {
+
+    const container =
+        document.getElementById(
+            "adminCompetitions"
+        );
+
+
+    container.innerHTML = "";
+
+
+    if (competitions.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="no-data">
+
+                No competitions added yet.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    competitions.forEach(
+        (competition, competitionIndex) => {
+
+
+            const box =
+                document.createElement(
+                    "div"
+                );
+
+
+            box.className =
+                "admin-competition";
+
+
+            box.innerHTML = `
+
+                <div class="admin-competition-header">
+
+
+                    <div>
+
+                        <h3>
+
+                            ${competition.icon || "🏆"}
+
+                            ${escapeHTML(
+                                competition.name
+                            )}
+
+                        </h3>
+
+
+                        <p style="
+                            color:#777;
+                            margin-top:5px;
+                        ">
+
+                            ${escapeHTML(
+                                competition.description ||
+                                ""
+                            )}
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-action-buttons">
+
+
+                        <button
+                            class="edit-button"
+                            onclick="editCompetition(
+                                ${competitionIndex}
+                            )"
+                        >
+
+                            ✏️ Edit
+
+                        </button>
+
+
+                        <button
+                            class="delete-button"
+                            onclick="deleteCompetition(
+                                ${competitionIndex}
+                            )"
+                        >
+
+                            🗑️ Delete
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="event-details">
+
+
+                    <p>
+
+                        📅 <strong>Date:</strong>
+
+                        ${escapeHTML(
+                            competition.date
+                            ?
+                            formatDate(
+                                competition.date
+                            )
+                            :
+                            "Not announced"
+                        )}
+
+                    </p>
+
+
+                    <p>
+
+                        ⏰ <strong>Time:</strong>
+
+                        ${escapeHTML(
+                            competition.time
+                            ?
+                            formatTime(
+                                competition.time
+                            )
+                            :
+                            "Not announced"
+                        )}
+
+                    </p>
+
+
+                    <p>
+
+                        📍 <strong>Venue:</strong>
+
+                        ${escapeHTML(
+                            competition.venue ||
+                            "Not announced"
+                        )}
+
+                    </p>
+
+
+                </div>
+
+
+                <div class="category-admin">
+
+
+                    <strong>
+                        Categories
+                    </strong>
+
+
+                    <div style="margin-top:10px;">
+
+
+                        ${
+                            competition.categories.length === 0
+
+                            ?
+
+                            `<p style="color:#777;">
+                                No categories added.
+                            </p>`
+
+                            :
+
+                            competition.categories
+                                .map(
+                                    (
+                                        category,
+                                        categoryIndex
+                                    ) => `
+
+                                        <div
+                                            class="category-admin-item"
+                                        >
+
+                                            <span>
+
+                                                ${escapeHTML(
+                                                    category
+                                                )}
+
+                                            </span>
+
+
+                                            <button
+                                                class="small-delete"
+                                                onclick="deleteCategory(
+                                                    ${competitionIndex},
+                                                    ${categoryIndex}
+                                                )"
+                                            >
+
+                                                Delete
+
+                                            </button>
+
+                                        </div>
+
+                                    `
+                                )
+                                .join("")
+
+                        }
+
+
+                    </div>
+
+
+                    <div class="add-category-row">
+
+
+                        <input
+                            type="text"
+                            id="categoryInput${competitionIndex}"
+                            placeholder="Enter category"
+                        >
+
+
+                        <button
+                            class="add-button"
+                            onclick="addCategory(
+                                ${competitionIndex}
+                            )"
+                        >
+
+                            + Add
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            `;
+
+
+            container.appendChild(
+                box
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   EDIT COMPETITION
+===================================================== */
+
+function editCompetition(index) {
+
+    const competition =
+        competitions[index];
+
+
+    const newName =
+        prompt(
+            "Competition name:",
+            competition.name
+        );
+
+
+    if (newName === null)
+        return;
+
+
+    const newDescription =
+        prompt(
+            "Description:",
+            competition.description || ""
+        );
+
+
+    if (newDescription === null)
+        return;
+
+
+    const newDate =
+        prompt(
+            "Date (YYYY-MM-DD):",
+            competition.date || ""
+        );
+
+
+    if (newDate === null)
+        return;
+
+
+    const newTime =
+        prompt(
+            "Time (HH:MM):",
+            competition.time || ""
+        );
+
+
+    if (newTime === null)
+        return;
+
+
+    const newVenue =
+        prompt(
+            "Venue:",
+            competition.venue || ""
+        );
+
+
+    if (newVenue === null)
+        return;
+
+
+    competition.name =
+        newName.trim();
+
+
+    competition.description =
+        newDescription.trim();
+
+
+    competition.date =
+        newDate.trim();
+
+
+    competition.time =
+        newTime.trim();
+
+
+    competition.venue =
+        newVenue.trim();
+
+
+    saveCompetitions();
+
+
+    displayAdminCompetitions();
+
+    displayCompetitions();
+
+
+    alert(
+        "Competition updated successfully!"
+    );
+
+}
+
+
+/* =====================================================
+   DELETE COMPETITION
+===================================================== */
+
+function deleteCompetition(index) {
+
+    const competition =
+        competitions[index];
+
+
+    if (
+        !confirm(
+            `Are you sure you want to delete "${competition.name}"?`
+        )
+    )
+        return;
+
+
+    competitions.splice(
+        index,
+        1
+    );
+
+
+    saveCompetitions();
+
+
+    displayAdminCompetitions();
+
+    displayCompetitions();
+
+}
+
+
+/* =====================================================
+   ADD CATEGORY
+===================================================== */
+
+function addCategory(
+    competitionIndex
+) {
+
+    const input =
+        document.getElementById(
+            `categoryInput${competitionIndex}`
+        );
+
+
+    const category =
+        input.value.trim();
+
+
+    if (!category) {
+
+        alert(
+            "Please enter a category."
+        );
+
+        return;
+
+    }
+
+
+    const exists =
+        competitions[
+            competitionIndex
+        ].categories.some(
+            existingCategory =>
+                existingCategory.toLowerCase() ===
+                category.toLowerCase()
+        );
+
+
+    if (exists) {
+
+        alert(
+            "This category already exists."
+        );
+
+        return;
+
+    }
+
+
+    competitions[
+        competitionIndex
+    ].categories.push(
+        category
+    );
+
+
+    saveCompetitions();
+
+
+    displayAdminCompetitions();
+
+}
+
+
+/* =====================================================
+   DELETE CATEGORY
+===================================================== */
+
+function deleteCategory(
+    competitionIndex,
+    categoryIndex
+) {
+
+    const category =
+        competitions[
+            competitionIndex
+        ].categories[
+            categoryIndex
+        ];
+
+
+    if (
+        !confirm(
+            `Delete category "${category}"?`
+        )
+    )
+        return;
+
+
+    competitions[
+        competitionIndex
+    ].categories.splice(
+        categoryIndex,
+        1
+    );
+
+
+    saveCompetitions();
+
+
+    displayAdminCompetitions();
+
+}
+
+
+/* =====================================================
+   REGISTRATION TABLE
+===================================================== */
+
+function displayRegistrations(
+    searchTerm = ""
+) {
+
+    const table =
+        document.getElementById(
+            "registrationTable"
+        );
+
+
+    table.innerHTML = "";
+
+
+    const filtered =
+        registrations.filter(
+            registration => {
+
+
+                const text = (
+
+                    registration.name +
+                    " " +
+                    registration.rollNumber +
+                    " " +
+                    registration.email +
+                    " " +
+                    registration.phone +
+                    " " +
+                    registration.competition +
+                    " " +
+                    registration.category +
+                    " " +
+                    registration.branch
+
+                ).toLowerCase();
+
+
+                return text.includes(
+                    searchTerm.toLowerCase()
+                );
+
+            }
+        );
+
+
+    if (filtered.length === 0) {
+
+        table.innerHTML = `
+
+            <tr>
+
+                <td
+                    colspan="9"
+                    class="no-data"
+                >
+
+                    No registered students found.
+
+                </td>
+
+            </tr>
+
+        `;
+
+        return;
+
+    }
+
+
+    filtered.forEach(
+        registration => {
+
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.name
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.rollNumber
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.branch
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.year
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.email
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.phone
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.competition
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    ${escapeHTML(
+                        registration.category
+                    )}
+
+                </td>
+
+
+                <td>
+
+                    <button
+                        class="delete-button"
+                        onclick="deleteRegistration(
+                            ${JSON.stringify(
+                                registration.id
+                            )}
+                        )"
+                    >
+
+                        🗑️ Delete
+
+                    </button>
+
+                </td>
+
+            `;
+
+
+            table.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchRegistrations() {
+
+    const searchTerm =
+        document.getElementById(
+            "searchInput"
+        ).value;
+
+
+    displayRegistrations(
+        searchTerm
+    );
+
+}
+
+
+/* =====================================================
+   ADMIN DELETE REGISTRATION
+===================================================== */
+
+function deleteRegistration(id) {
+
+    const registration =
+        registrations.find(
+            registration =>
+                registration.id === id
+        );
+
+
+    if (!registration)
+        return;
+
+
+    if (
+        !confirm(
+            `Delete registration of "${registration.name}"?`
+        )
+    )
+        return;
+
+
+    registrations =
+        registrations.filter(
+            registration =>
+                registration.id !== id
+        );
+
+
+    saveRegistrations();
+
+
+    displayRegistrations();
+
+
+    alert(
+        "Registration deleted successfully."
+    );
+
+}
+
+
+/* =====================================================
+   CHANGE ADMIN USERNAME + PASSWORD
+===================================================== */
+
+function changeAdminAccount() {
+
+    const newUsername =
+        document
+            .getElementById(
+                "newUsername"
+            )
+            .value
+            .trim();
+
+
+    const newPassword =
+        document
+            .getElementById(
+                "newPassword"
+            )
+            .value;
+
+
+    if (
+        !newUsername &&
+        !newPassword
+    ) {
+
+        alert(
+            "Please enter a new username or password."
+        );
+
+        return;
+
+    }
+
+
+    if (newUsername) {
+
+        if (
+            newUsername.length < 3
+        ) {
+
+            alert(
+                "Username must contain at least 3 characters."
+            );
+
+            return;
+
+        }
+
+
+        adminAccount.username =
+            newUsername;
+
+    }
+
+
+    if (newPassword) {
+
+        if (
+            newPassword.length < 6
+        ) {
+
+            alert(
+                "Password must contain at least 6 characters."
+            );
+
+            return;
+
+        }
+
+
+        adminAccount.password =
+            newPassword;
+
+    }
+
+
+    saveAdminAccount();
+
+
+    document
+        .getElementById(
+            "newUsername"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "newPassword"
+        )
+        .value = "";
+
+
+    document
+        .getElementById(
+            "currentUsername"
+        )
+        .value =
+            adminAccount.username;
+
+
+    alert(
+        "Admin account updated successfully!"
+    );
+
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+function formatDate(dateString) {
+
+    if (!dateString)
+        return "Not announced";
+
+
+    const date =
+        new Date(
+            dateString +
+            "T00:00:00"
+        );
+
+
+    return date.toLocaleDateString(
+        "en-IN",
+        {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+function formatTime(timeString) {
+
+    if (!timeString)
+        return "Not announced";
+
+
+    const parts =
+        timeString.split(":");
+
+
+    let hour =
+        parseInt(
+            parts[0]
+        );
+
+
+    const minute =
+        parts[1];
+
+
+    const ampm =
+        hour >= 12
+        ? "PM"
+        : "AM";
+
+
+    hour =
+        hour % 12 || 12;
+
+
+    return (
+        hour +
+        ":" +
+        minute +
+        " " +
+        ampm
+    );
+
+}
+
+
+/* =====================================================
+   HTML SECURITY
+===================================================== */
+
+function escapeHTML(text) {
+
+    if (
+        text === null ||
+        text === undefined
+    ) {
+
+        return "";
+
+    }
+
+
+    return String(text)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+displayCompetitions();
+
+</script>
+
+</body>
+
+</html>
